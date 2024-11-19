@@ -2,43 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  :root {
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
+/* Estilos globales predeterminados */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    /* Siempre tema claro */
-    color: #213547;
-    background-color: #ffffff;
-
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-
-  /* Reglas para enlaces y botones */
-  a:hover {
-    color: #747bff;
-  }
-
-  button {
-    background-color: #f9f9f9;
-  }
+  /* Esquema claro predeterminado */
+  color: #213547;
+  background-color: #ffffff;
 }
 
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+/* Estilos personalizados que se pueden usar con clases */
 @layer components {
-  .custom-button {
+  .btn-default {
     @apply rounded-lg border border-transparent px-4 py-2 text-base font-medium 
-    bg-[#ffffff] cursor-pointer transition-colors duration-250;
+    transition-colors cursor-pointer;
   }
 
-  .custom-button:hover {
+  .btn-default:hover {
     @apply border-[#646cff];
   }
 
-  .custom-button:focus {
+  .btn-default:focus,
+  .btn-default:focus-visible {
     @apply outline-none ring-4;
   }
 }
