@@ -21,6 +21,14 @@ body {
   min-width: 320px;
 }
 
+/* Forzar mismo esquema para modo oscuro */
+@media (prefers-color-scheme: dark) {
+  :root {
+    color: #213547; /* Mismos colores que el modo claro */
+    background-color: #ffffff; /* Mismo fondo que el modo claro */
+  }
+}
+
 /* Estilos personalizados que se pueden usar con clases */
 @layer components {
   .btn-default {
