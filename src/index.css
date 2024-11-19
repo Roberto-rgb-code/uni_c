@@ -33,12 +33,7 @@ body {
   }
 }
 
-/* Modo claro/oscuro gestionado por Tailwind */
-@media (prefers-color-scheme: light) {
-  :root {
-    @apply text-[#213547] bg-white;
-  }
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
