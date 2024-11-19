@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+/* Estilos personalizados que se pueden usar con clases */
+@layer components {
+  .btn-default {
+    @apply border-radius-8 border border-transparent px-4 py-2 text-base font-medium 
+    transition-colors cursor-pointer;
+  }
+
+  .btn-default:hover {
+    @apply border-[#646cff];
+  }
+
+  .btn-default:focus,
+  .btn-default:focus-visible {
+    @apply outline-4 outline-offset-2;
+  }
+}
+
+/* Modo claro/oscuro gestionado por Tailwind */
+@media (prefers-color-scheme: light) {
+  :root {
+    @apply text-[#213547] bg-white;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    @apply text-[rgba(255,255,255,0.87)] bg-[#242424];
+  }
+}
